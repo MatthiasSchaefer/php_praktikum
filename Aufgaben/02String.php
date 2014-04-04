@@ -21,7 +21,7 @@ class String {
     }
 
     public function concat(){
-        //Alle Strings im Array $strings zu einer Zeichenkette zusammenfügen.
+        //Alle Strings im Array $strings zu einer Zeichenkette zusammenfügen. (http://de3.php.net/implode)
 
     }
     public function find($f){
@@ -36,5 +36,8 @@ class String {
         //Drehe jede Zeichenkette um.
 
     }
+    public function sort($asc){
+        //sortiere die einträge im Array (asc = 1 aufsteigend, asc = 0 absteigend)
 
+    }
 }
