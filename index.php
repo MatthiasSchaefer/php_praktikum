@@ -6,7 +6,7 @@ include_once 'Aufgaben/03Kontrollfluss.php';
 
 $rechner = new \de\hsw\php\Rechner();
 $rechner->setA(56);
-$rechner->setB(65);
+$rechner->setB(65); 
 $erg = 121;
 echo "rechner->add()  :".($rechner->add()==$erg?"OK!":($rechner->add()." statt $erg gefunden."))."\n";
 $erg = -9;
@@ -50,7 +50,7 @@ $kontrollfluss = new \de\hsw\php\Kontrollfluss();
 $erg = [[3,5,-1],[5,3,1],[5,5,0]];
 echo 'kontrollfluss->equal() :';
 foreach($erg as $e)
-{
+{ 
     $kontrollfluss->setA($e[0]);
     $kontrollfluss->setB($e[1]);
     if($kontrollfluss->equal()===$e[2])echo 'OK! ';
@@ -63,8 +63,7 @@ $kontrollfluss->setA(20);
 echo 'kontrollfluss->liste() :'.($kontrollfluss->liste()==$erg?"OK!":(json_encode($kontrollfluss->liste())." statt ".json_encode($erg)." gefunden."))."\n";
 
 $kontrollfluss->setA(10);
-$erg = 134961;
-echo 'kontrollfluss->fak()   :'.($kontrollfluss->liste()==$erg?"OK!":$kontrollfluss->liste()." statt $erg gefunden.")."\n";;
-
+$erg = 3628800;
+echo 'kontrollfluss->fak()   :'.($kontrollfluss->fak()==$erg?"OK!":$kontrollfluss->fak()." statt $erg gefunden.")."\n";
 ?>
 </pre>
