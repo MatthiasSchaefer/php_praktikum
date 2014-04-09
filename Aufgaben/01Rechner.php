@@ -1,63 +1,137 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: mielke
  * Date: 03.04.14
  * Time: 16:14
  */
-
 namespace de\hsw\php;
 
-
-class Rechner {
-
-    private $a = 0,$b = 0;
-
-    public function  getA(){
+class Rechner
+{
+    private $a = 0, $b = 0;//Zahlen
+    /**
+     * gibt a zurück
+     * @return number
+     */
+    public function getA()
+    {
         return $this->a;
     }
-    public function  setA($a){
+    
+    /**
+     * setzt a um
+     * @param unknown $a
+     */
+    public function setA($a)
+    {
         $this->a = $a;
     }
-    public function  getB(){
+    
+    /**
+     * gibt B zurück
+     * @return number
+     */
+    public function getB()
+    {
         return $this->b;
     }
-    public function  setB($b){
+    
+    /**
+     * setzt B neu
+     * @param neuer Wert $b
+     */
+    public function setB($b)
+    {
         $this->b = $b;
     }
-
-    public function add(){
-        //a+b
+    /**
+     * gibt die Summe von A und B zurück
+     */
+    public function add()
+    {
+        return $this->a + $this->b;
     }
-    public function sub(){
-        //a-b
+    
+    /**
+     * gibt die Differenz zurück
+     */
+    public function sub()
+    {
+        return $this->a - $this->b;
     }
-    public function mul(){
-        //a*b
+    
+    /**
+     * gibt das Produkt von A und B zurück
+     */
+    public function mul()
+    {
+        return $this->a * $this->b;
     }
-    public function div(){
-        //a/b
+    
+    /**
+     * 
+     * Dividiert a und b und gibt das Ergebnis zurück
+     */
+    public function div()
+    {
+        return $this->a / $this->b;
     }
-    public function div2(){
-        //a/b Ganzzahldivision (19/4 = 4)
+    
+    /**
+     * Ganzzahldivision von a und b
+     */
+    public function div2()
+    {
+        return floor($this->a / $this->b);
     }
-    public function mod(){
-        //a modulo b
+    
+    /**
+     * gibt den Modulus zurück
+     */
+    public function mod()
+    {
+        return $this->a % $this->b;
     }
-    public function sqr(){
-        //aÂ²
+    
+    /**
+     * gibt das Quadrat von a zurück
+     */
+    public function sqr()
+    {
+        return pow($this->a, 2);
     }
-    public function sqrt(){
-        //Wurzel aus a
+    
+    /**
+     * @return Wurzel von a
+     */
+    public function sqrt()
+    {
+        return sqrt($this->a);
     }
-    public function und(){
-        //a binÃ¤r und verknÃ¼pft mit b.
+    
+    /**
+     * @return binäre AND Verknüpfung von a und b
+     */
+    public function und()
+    {
+        return $this->a & $this->b;
     }
-    public function oder(){
-        //a binÃ¤r oder verknÃ¼pft mit b.
+    
+    /**
+     * @return binäre OR Verknüpfung von a und b
+     */
+    public function oder()
+    {
+        return $this->a | $this->b;
     }
-    public function xoder(){
-        //a binÃ¤r xoder verknÃ¼pft mit b.
+    
+    /**
+     * @return binäre XOR Verknüpfung von a und b
+     */
+    public function xoder()
+    {
+        return $this->a ^ $this->b;
     }
-
 } 
